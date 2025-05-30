@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9CD98ED52DE99D2D00BDCEF0 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 9CD98ED42DE99D2500BDCEF0 /* README.MD */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		9C758D3F2DE9186F005CDF5F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		9C758D302DE9186E005CDF5F /* zenon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zenon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C758D3E2DE9186F005CDF5F /* zenonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zenonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C758D482DE9186F005CDF5F /* zenonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zenonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CD98ED42DE99D2500BDCEF0 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		9C758D272DE9186E005CDF5F = {
 			isa = PBXGroup;
 			children = (
+				9CD98ED42DE99D2500BDCEF0 /* README.MD */,
 				9C758D322DE9186E005CDF5F /* zenon */,
 				9C758D412DE9186F005CDF5F /* zenonTests */,
 				9C758D4B2DE9186F005CDF5F /* zenonUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD98ED52DE99D2D00BDCEF0 /* README.MD in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
