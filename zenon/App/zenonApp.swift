@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct zenonApp: App {
+    @StateObject private var session = SessionStore()
+      
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            if session.isAuthenticated {
+                ContentView()
+                    .environmentObject(session)
+            } else {
+                LoginView()
+                    .environmentObject(session)
+            }
         }
     }
 }
