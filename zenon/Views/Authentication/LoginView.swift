@@ -78,7 +78,6 @@ struct LoginView: View {
         }
         .padding()
         .frame(minWidth: 400, maxWidth: 500, minHeight: 400, maxHeight: 500)
-        // Présente RegisterView en sheet modale
         .sheet(isPresented: $showRegister) {
             RegisterView()
                 .environmentObject(session)
