@@ -40,7 +40,7 @@ actor APIClient {
     static let shared = APIClient()
   
     /// L'adresse de base de votre API.
-    private let baseURL = URL(string: "http://localhost:8080")!
+    let baseURL = URL(string: "http://localhost:8080")!
     var jwtToken: String? = nil
   
     private init() {} // Empêche l'instanciation en dehors

@@ -1,6 +1,6 @@
 import Foundation
 
-struct User: Decodable {
+struct User: Identifiable, Codable {
     let id: Int
     let dateCreation: Date
     let email: String

@@ -4,7 +4,8 @@ struct LoginView: View {
     @EnvironmentObject private var session: SessionStore
   
     // États locaux pour l'email et le mot de passe
-    @State private var email: String = ""
+    @State private var email = ""
+    @State private var emailIsValid = false
     @State private var password: String = ""
     @State private var errorMessage: String? = nil
     @State private var isLoading: Bool = false
@@ -24,6 +25,10 @@ struct LoginView: View {
                 TextField("exemple@domaine.com", text: $email)
                     .textFieldStyle(.roundedBorder)
                     .padding(.vertical, 4)
+                    // À chaque changement de texte on recalcule la validité
+                    .onChange(of: email, initial: emailIsValid) { oldValue, newValue in
+                        emailIsValid = ValidationService.isValidEmail(newValue)
+                    }
             }
             .padding(.horizontal)
             
@@ -59,8 +64,10 @@ struct LoginView: View {
                 }
             }
             .buttonStyle(.borderedProminent)
-            .disabled(email.isEmpty || password.isEmpty || isLoading)
+            .disabled(email.isEmpty || password.isEmpty || isLoading || !emailIsValid)
+			.keyboardShortcut(.defaultAction)
             .padding(.top, 8)
+			
             
             // Lien vers l'inscription
             HStack {
